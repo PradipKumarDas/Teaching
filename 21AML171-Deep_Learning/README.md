@@ -6,8 +6,6 @@
 
 Author's original repository is available at https://github.com/ageron/handson-ml3. Relevant implementations were modified to suit the classroom learning. 
 
-### Recommended Development Envirobnm
-
 ### Package Installation
 For _Anaconda_ Data Science platform, it is recommended to use its default package manager _Conda_ to install all required packages over the other package managers such as _Pip_ that may create package conflict across environments. But package installation using Conda may require administrative privilege. Package installation on local computers in Windows is recommeded over _Anaconda Prompt_ available in _Start -> Anaconda_ menu.
 
@@ -61,4 +59,7 @@ Pip Installation:
 Conda Installation:
 `conda install conda-forge::tensorflow-datasets`
 
+### Other Datasets
+
+Unless otherwise specified, datasets required for experiments are stored into folder _Data_ located in the root folder in this repository.
 
