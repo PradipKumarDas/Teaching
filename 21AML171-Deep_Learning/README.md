@@ -1,4 +1,4 @@
-#DEEP LEARNING [21AML171]
+# DEEP LEARNING [21AML171]
 
 ## Teaching material and reference implementation for laboratory experiments.
 
@@ -6,8 +6,10 @@
 
 Author's original repository is available at https://github.com/ageron/handson-ml3. Relevant implementations were modified to suit the classroom learning. 
 
+### Recommended Development Envirobnm
+
 ### Package Installation
-For _Anaconda_ Data Science platform, it is recommended to use its default package manager _Conda_ to install all required packages over the other package managers such as _Pip_ that may create package conflict across environments.
+For _Anaconda_ Data Science platform, it is recommended to use its default package manager _Conda_ to install all required packages over the other package managers such as _Pip_ that may create package conflict across environments. But package installation using Conda may require administrative privilege. Package installation on local computers in Windows is recommeded over _Anaconda Prompt_ available in _Start -> Anaconda_ menu.
 
 #### TensorFlow
 
@@ -43,7 +45,7 @@ Then copy the service TensorBoard URL to the browser to open it.
 
 ### Google Colaboratory (Google Colab)
 
-There are few Jupyter notebook in this repository that are suggested to run on a Graphics Processing Unit (GPU) rather than on a Central Processing Unit (CPU) for faster model training. One of the provides that provides access to GPU over cloud is Google and it is available at https://colab.research.google.com. It provides free access to a GPU runtime up to certain amount of time before the runtime resets. Existing Google account is needed to login into Google Colab.
+There are few Jupyter notebook in this repository that are suggested to run on a Graphics Processing Unit (GPU) rather than on a Central Processing Unit (CPU) for faster model training. One of the providers that allows access to GPU over cloud is Google and it is available at https://colab.research.google.com. It provides free access to a GPU runtime up to certain amount of time before the runtime resets. Existing Google account is needed to login into Google Colab.
 
 A new notebook can be created from the _Open notebook_ dialog. From the same dialog, an existing notebook can also be opened browsing from the available sources such as Google Drive and GitHub. A notebook located from local machine can also be uploaded from the _Upload_ option available in _File_ menu.
 
