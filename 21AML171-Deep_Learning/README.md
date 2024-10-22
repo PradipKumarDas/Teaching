@@ -60,6 +60,17 @@ Refer the steps below to use Google Colab.
 
 7. Release the attached runtime by clicking _**Disconnect and delete runtime**_ from the top-right runtime menu.
 
+## Models
+### TensorFlow Hub
+
+Though TensorFlow Hub package is readily available specifically in Google Colab, local data science platform such as Anaconda may not come with this preinstalled. This can be installed in the following way.
+
+Pip Installation:
+`pip install tensorflow-hub`
+
+Conda Installation:
+`conda install conda-forge::tensorflow-hub`
+
 ## Datasets
 ### TensorFlow Datasets
 
