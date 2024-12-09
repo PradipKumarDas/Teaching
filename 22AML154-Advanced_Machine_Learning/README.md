@@ -8,6 +8,15 @@ Author's original repository is available at https://github.com/ageron/handson-m
 ## Package Installation
 For _Anaconda_ Data Science platform, it is recommended to use its default package manager _Conda_ to install all required packages over the other package managers such as _Pip_ that may create package conflict across environments. But package installation using Conda may require administrative privilege. Package installation on local computers in Windows is recommeded over _Anaconda Prompt_ available in _Start -> Anaconda_ menu.
 
+### Keras Tuner
+
+Conda Installation:
+`conda install conda-forge::keras-tuner`
+
+Pip Installation:
+`pip install keras-tuner`
+
+
 ### TensorFlow
 
 Conda Installation:
