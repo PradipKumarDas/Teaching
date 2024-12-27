@@ -1,0 +1,5 @@
+# Memory-mapping
+*.mmap
+
+# Hyperparameters Tuning
+my_fashion_mnist/
