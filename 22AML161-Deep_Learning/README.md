@@ -37,6 +37,9 @@ Refer to the below steps to setup the development environment on Windows.
 
 6. Now, withing the same environment, execute `jupyter notebook` or `jupyter lab` to open Jupyter Notebook or Jupyter Lab editor. The later one is recommended out of the two.
 
+**NOTE:** Everytime Anaconda Prompt is opened, it activates **base** environment by default. The target environment **MLLab01** has to be activated by entering command `conda activate MLLab01`.
+
+
 ## Alternatives for Editor
 
 ### Visual Studio Code
