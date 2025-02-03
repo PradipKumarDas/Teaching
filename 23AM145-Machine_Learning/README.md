@@ -14,16 +14,33 @@ All experiments were tested on
 
 ## EXPERIMENTS
 
+**Introduction to Machine Learning**
 1. Predicting Life Satisfaction Index
-2. Simple End-to-End Machine Learning Project
+2. Simple End-to-End Machine Learning Project `Tutorial`
 3. Data Preprocessing
-4. Breast Cancer Detection using Linear Model
-5. Handwritten Digit Prediction using Linear Model
-6. California House Price Prediction using Different Regression Techniques
-7. Wine Class Prediction using Linear and Kernelized Support Vector Machine
-8. Iris Flower Species Prediction using Decision Tree
-9. Handwritten Digit Prediction using Voting Classification
-10. Stacked Ensembling Implementation for Classification
+
+**Linear Models**
+
+Linear Models for Classification:
+1. Breast Cancer Detection using Linear Model `Tutorial`
+2. Handwritten Digit Prediction using Linear Model
+
+Linear Models for Regression:
+1. California House Price Prediction using Different Regression Techniques
+
+**Non-Linear Models**
+
+Support Vector Machines:
+1. Wine Class Prediction using Linear and Kernelized Support Vector Machine
+
+Decision Trees:
+1. Iris Flower Species Prediction using Decision Tree
+
+**Ensembling**
+
+1. Handwritten Digit Prediction using Voting Classification
+2. Stacked Ensembling Implementation for Classification
+
 
 ## Setting-up Development Environment on Windows
 
