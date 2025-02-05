@@ -6,11 +6,19 @@
 
 ## Experiments
 
-1. Self-regularized Network using SELU Activation Function
+**Deep Neural Networks Training:**
+
+1. Self-regularized Network using SELU Activation Function `Tutorial`
 
 2. Model Performance Improvement with Batch Normalization Layers
 
 3. Transfer Learning for Improved Model with Less Data
+
+**Convolutional Neural Networks:**
+
+1. Building a Convolutional Neural Network (CNN) from Scratch
+
+2. \<PLACEHOLDER\>
 
 _Coming up the remaining ones..._
 
