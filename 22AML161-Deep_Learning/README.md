@@ -18,7 +18,7 @@
 
 1. Building a Convolutional Neural Network (CNN) from Scratch
 
-2. \<PLACEHOLDER\>
+2. Building an Image Classifier using a Pretrained Xception Model on TensorFlow Flower Dataset
 
 _Coming up the remaining ones..._
 
