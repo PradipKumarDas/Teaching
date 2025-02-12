@@ -22,7 +22,8 @@ All experiments were tested on
 **Linear Models**
 
 Linear Models for Classification:
-1. Breast Cancer Detection using Linear Model `Tutorial`
+1. Classification `Tutorial`
+2. Breast Cancer Detection using Linear Model `Tutorial`
 2. Handwritten Digit Prediction using Linear Model
 
 Linear Models for Regression:
