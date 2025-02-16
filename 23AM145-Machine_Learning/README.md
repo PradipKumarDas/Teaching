@@ -40,7 +40,7 @@ Decision Trees:
 **Ensembling**
 
 1. Handwritten Digit Prediction using Voting Classification
-2. Stacked Ensembling Implementation for Classification
+2. Stacked Ensembling Implementation for Classification `Tutorial`
 
 
 ## Setting-up Development Environment on Windows
