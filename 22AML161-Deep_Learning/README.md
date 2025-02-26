@@ -20,6 +20,11 @@
 
 2. Building an Image Classifier using a Pretrained Xception Model on TensorFlow Flower Dataset
 
+**Sequence Processing:**
+
+1. Sequence Processing using Recurrent Neural Networks (RNNs)
+
+
 _Coming up the remaining ones..._
 
 
