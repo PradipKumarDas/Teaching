@@ -24,6 +24,9 @@
 
 1. Sequence Processing using Recurrent Neural Networks (RNNs)
 
+**Text Processing**
+
+1. Sentiment Analysis using Recurrent Neural Networks & Embeddings
 
 _Coming up the remaining ones..._
 
