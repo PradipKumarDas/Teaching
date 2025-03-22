@@ -28,6 +28,8 @@
 
 1. Sentiment Analysis using Recurrent Neural Networks & Embeddings
 
+2. Text Generation using Pretrained Transformer-based Language Model
+
 _Coming up the remaining ones..._
 
 
