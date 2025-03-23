@@ -6,7 +6,7 @@
 
 ## Experiments
 
-**Deep Neural Networks Training:**
+**Deep Neural Networks Training**
 
 1. Self-regularized Network using SELU Activation Function `Tutorial`
 
@@ -14,13 +14,13 @@
 
 3. Transfer Learning for Improved Model with Less Data
 
-**Convolutional Neural Networks:**
+**Convolutional Neural Networks**
 
 1. Building a Convolutional Neural Network (CNN) from Scratch
 
 2. Building an Image Classifier using a Pretrained Xception Model on TensorFlow Flower Dataset
 
-**Sequence Processing:**
+**Sequence Processing**
 
 1. Sequence Processing using Recurrent Neural Networks (RNNs)
 
@@ -29,6 +29,10 @@
 1. Sentiment Analysis using Recurrent Neural Networks & Embeddings
 
 2. Text Generation using Pretrained Transformer-based Language Model
+
+**Representation Learning**
+
+1. Reconstructing Noisy Images using Denoising Autoencoder
 
 _Coming up the remaining ones..._
 
