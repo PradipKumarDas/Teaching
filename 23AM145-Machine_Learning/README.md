@@ -40,7 +40,11 @@ Decision Trees:
 **Ensembling**
 
 1. Handwritten Digit Prediction using Voting Classification
-2. Stacked Ensembling Implementation for Classification `Tutorial`
+2. Stacked Ensembling for Classification
+
+**Bayesian Learning**
+
+1. Text Classification using Naive Bayes Classifier
 
 
 ## Setting-up Development Environment on Windows
