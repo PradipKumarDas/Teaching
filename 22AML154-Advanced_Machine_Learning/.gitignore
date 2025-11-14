@@ -3,3 +3,6 @@
 
 # Hyperparameters Tuning
 my_fashion_mnist/
+
+# Models
+models/
