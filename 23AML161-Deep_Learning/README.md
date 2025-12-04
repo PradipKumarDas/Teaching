@@ -25,9 +25,9 @@ Notebooks located in the folder [refresher-on-artificial-neural-networks](https:
 
 **Sequence Processing**
 
-[TENTATIVE LIST]
+1. [Univariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_1.ipynb)
 
-1. Sequence Processing using Recurrent Neural Networks (RNNs)
+2. [Multivariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_2.ipynb)
 
 **Text Processing**
 
