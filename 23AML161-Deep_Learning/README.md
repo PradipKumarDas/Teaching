@@ -18,30 +18,28 @@ Notebooks located in the folder [refresher-on-artificial-neural-networks](https:
 
 **Convolutional Neural Networks**
 
-1. [A Simple Convolutional Neural Network (CNN) from Scratch](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/2_cnn-practical_1.ipynb)
+3. [A Simple Convolutional Neural Network (CNN) from Scratch](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/2_cnn-practical_1.ipynb)
 
-2. [Simple Single Object Detection - A Naive Approach](https://github.com/PradipKumarDas/Teaching/blob/master/23AML161-Deep_Learning/simple-single-object-detection-naive-approach.ipynb)
+4. [Simple Single Object Detection - A Naive Approach](https://github.com/PradipKumarDas/Teaching/blob/master/23AML161-Deep_Learning/simple-single-object-detection-naive-approach.ipynb)
 
 
 **Sequence Processing**
 
-1. [Univariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_1.ipynb)
+5. [Univariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_1.ipynb)
 
-2. [Multivariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_2.ipynb)
+6. [Multivariate Forecasting using Simple & Deep Recurrent Neural Networks](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/3_sequence_processing-practical_2.ipynb)
 
 **Text Processing**
 
-[TENTATIVE LIST]
+7. [Sentiment Analysis using Recurrent Neural Networks & Embeddings](https://github.com/PradipKumarDas/Teaching/blob/master/21AML171-Deep_Learning/4_sentiment_analysis-practical_1.ipynb)
 
-1. Sentiment Analysis using Recurrent Neural Networks & Embeddings
-
-2. Text Generation using Pretrained Transformer-based Language Model
+8. [Text Generation using Pretrained Transformer-based Language Model](https://github.com/PradipKumarDas/Teaching/blob/master/22AML161-Deep_Learning/text_generation_using_pretrained_transformer-based_language_model.ipynb)
 
 **Representation Learning** 
 
-[TENTATIVE LIST]
+9. [Reconstructing Noisy Images using Denoising Autoencoder](https://github.com/PradipKumarDas/Teaching/blob/master/22AML161-Deep_Learning/reconstructing_noisy_images_using_denoising_autoencoder.ipynb)
 
-1. Reconstructing Noisy Images using Denoising Autoencoder
+10. [Generating Images using Variational Autoencoder](https://github.com/PradipKumarDas/Teaching/blob/master/22AML161-Deep_Learning/generating_images_using_variational_autoencoder.ipynb)
 
 
 ## Setting-up Development Environment
@@ -64,9 +62,9 @@ Refer to the below steps to setup the development environment on Windows.
 
 5. From that environment,
 
-    i) execute `conda install jupyterlab matplotlib pandas scikit-learn conda-forge::transformers pydot` to install the mentioned packages mandaged by conda
+    i) execute `conda install jupyterlab matplotlib pandas scikit-learn conda-forge::transformers pydot statsmodels seaborn` to install the mentioned packages mandaged by conda
 
-    ii) execute `pip install tensorflow-hub tensorflow tensorboard tensorflow-datasets keras-tuner keras-hub` to install the mentioned packages managed by pip
+    ii) execute `pip install tensorflow-hub tensorflow tensorboard tensorflow-datasets keras-tuner keras-hub tf-keras` to install the mentioned packages managed by pip
 
     iii) execute `pip3 install torch torchvision tensorflow-datasets`
 
