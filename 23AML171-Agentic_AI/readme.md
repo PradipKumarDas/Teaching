@@ -1,0 +1,166 @@
+# AGENTIC ARTIFICIAL INTELLIGENCE [23AML171]
+
+## EXPERIMENTS
+
+- A simple 'hello world' agent that responds to generic question in non-streaming and streaming mode.
+
+- _List of remaining experiments will be made available soon._
+
+
+## CONDA ENVIRONMENT
+Python 3.12.13
+
+
+## SELF-HOSTED MODELS & PROVIDERS
+Majority of the experiments use self-hosted models using provider _Ollama_. Ollama service must be running to serve the models to the experiments. Refer to the installation section for additional instructions.
+
+List of few of popular selft-hosted models are provided below.
+
+| MODEL	| Intelligence on Artificial Analysis (https://artificialanalysis.ai/) | SIZE | CONTEXT WINDOW | INPUT | OUTPUT SPEED (tokens/second)| CAPABILITIES |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **gemma4:e4b**  |  19   | 9.6 GB	|128K	| Text, Image, Audio | -- | Vision, Tools, Multi-modal Reasoning, Coding, Audio |
+| **llama3.1:8b**  | 12    | 4.9 GB	|128K	| Text | 155 | Mathematics, Tools, Reasoning, Multilingual translation, Summarization, Coding |
+| **granite4.1:3b**  | 9    | 2.1 GB	|128K	| Text | -- | Summarization, Text classification, Text extraction, Question-answering, Retrieval Augmented Generation (RAG), Coding, Tools, Multilingual dialog use cases, Fill-In-the-Middle (FIM) |
+| **granite4.1:8b**	| 12    | 5.3 GB    |	128K | Text | 111 | Summarization, Text classification, Text extraction, Question-answering, Retrieval Augmented Generation (RAG), Coding, Tools, Multilingual dialog use cases, Fill-In-the-Middle (FIM) |
+| **gemma4:e2b**    | 15    |	7.2 GB | 128K |	Text, Image, Audio | - | Multi-Turn Conversations, Reasoning and Non-Reasoning, Coding, Native function-calling |
+| **gemma4:e4b**    | 15    |	9.6 GB | 128K |	Text, Image, Audio | 42/50 | Multi-Turn Conversations, Reasoning and Non-Reasoning, Coding, Native function-calling |
+| **qwen3.5:2b**    |	16  |	2.7 GB |	256K |	Text, Image, Audio |	340     | Reasoning and Non-Reasoning, Tools, Coding |
+| **qwen3.5:4b** |	27  |	3.4 GB |	256K |	Text, Image, Audio |	177/199 | Reasoning and Non-Reasoning, Tools, Coding |
+| **qwen3.5:9b**    |	32  |	6.6 GB |	256K |	Text, Image, Audio |	59      | Reasoning and Non-Reasoning, Tools, Coding |
+| **ministral-3:3b** |	11  |	3.0 GB |	256K |	Text, Image |	282 | Reasoning, Multilingual, Tools, Coding, Document analysis [This model requires Ollama 0.13.1, which is currently in pre-release.] |
+| **ministral-3:8b** |	15  |	6.0 GB |	256K |	Text, Image |	158 | Reasoning, Multilingual, Tools, Coding, Document analysis [This model requires Ollama 0.13.1, which is currently in pre-release.] |
+| **deepseek-r1:8b** (DeepSeek-R1-0528 upgrade) | - |	5.2 GB |	128K |	Text |	- |	Reasoning, Coding, Mathematics |
+| **llama3.2:3b** |	-   | 2.0 GB |	128K |	Text |	- |	Multilingual dialog use cases, Tools, Summarization, Prompt rewriting |
+| **nemotron-3-nano:4b** |	15 |	2.8 GB |	256K |	Text | - |		Reasoning, Multilingual, Tools |
+| **Mistral 7B**        | - | 4.4 GB |	32K |	Text | - | - |
+
+
+## INSTALLATION
+
+**Anaconda Datascience Platform:**
+
+Ensure Anaconda datascience platform is already installed in your computer. Then follow the instruction below to complete required installation to perform all the above listed experiments.
+
+**Specific Environment to Run Experiments:**
+
+For Windows, run the following commands in **Andaconda Prompt**.
+
+```
+conda create -n agentic_ai python=3.12.13     # Creates a new conda environment named "agentic_ai".
+
+conda activate agentic_ai                     # Activates the newly created environment.
+
+```
+
+**Ollama:**
+
+This installation may require administrator privilege.
+
+```
+curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.24.0 sh     # Installs a specifiC version
+```
+
+After installation Ollama listens at `127.0.0.1:11434`. Open the link in any web browser (alternatively, running command `curl http://localhost:11434` at the terminal) and check if response `Ollama is running` is received.
+
+If no response is received, then consider starting Ollama using the below mentioned command in the terminal.
+
+```
+ollama serve
+```
+
+Downlading specific models:
+```
+ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
+```
+
+Similarly, other models can also be downloaded as required.
+
+For a quick check if the downloaded models works, run the command at Terminal and have general conversation with it. To quit from the model prompt, type `/bye` and press enter.
+
+```
+ollama run llama3.2:3b --think=false
+```
+
+**Packages:**
+
+Installs required packages.
+
+```
+pip install agent-framework                 # Installs v1.2.0
+
+pip install ollama                          # Installs ollama v0.5.3
+
+pip install agent-framework-ollama --pre	# Installs agent-framework-ollama v1.0.0b260424 [requires ollama<0.5.4,>=0.5.3]
+
+pip install agent-framework-openai          # OpenAI compatible Ollama chat client
+
+pip install langchain                       # Installs Lanchain framework
+
+pip install langchain-ollama                # An integration package connecting Ollama and LangChain   
+
+pip install langchain-community             # Installs packages for 3rd-party integrations
+
+pip install langchain-mcp-adapters          # Library provides a lightweight wrapper that makes Anthropic Model Context Protocol (MCP) tools compatible with LangChain and LangGraph
+
+pip install wikipedia                       # Makes it easy to access and parse data from Wikipedia
+
+pip install langchain-experimental          # Holds experimental LangChain code, intended for research and experimental uses
+
+pip install langchain-neo4j                 # Package contains the LangChain integration with Neo4j.
+
+pip install langgraph-checkpoint-sqlite     # Contains implementation of LangGraph `CheckpointSaver` that uses SQLite DB (both sync and async, via aiosqlite)
+
+```
+
+**Workflow Visualization:**
+
+Installs visualization support for workflows. For Windows, refer https://graphviz.org/download/ and follow the installation instructions. For Linux, run the following command in the terminal.
+
+```
+sudo apt install graphviz
+```
+
+**Neo4j Desktop:**
+
+The following commands could be handy at times.
+
+```
+sudo neo4j start    # Starts Neo4j daemon.
+
+sudo neo4j stop     # Stops Neo4j daemon.
+
+sudo neo4j restart  # Restarts Neo4j daemon.
+
+MATCH (n)-[r]->(m) RETURN n, r, m       # Returna all nodes and their connecting relationships. 
+
+MATCH (n) DETACH DELETE n                Execute this at neo4j$ prompt in Neo4j UI to delete all the nodes and relationships from the database
+```
+Installation of Neo4j Desktop on Windows:
+
+Open Neo4j [Deployment Center](https://neo4j.com/deployment-center/?desktop-gdb), go to section `https://neo4j.com/deployment-center/?desktop-gdb`, select operating system from the dropdown and click on `Download`. Then run the installation file and follow online instructions.
+
+Installation of Neo4j Desktop on Linux:
+
+- Download AppImage for Neo4j Desktop from https://neo4j.com/download/ by filling an online form.
+- Move the downloaded AppImage file to an appropriate folder.
+- Open terminal and change the current directory to the one that contains the AppImage.
+- Run command `chmod +x <appimage file name>` to make the AppImage executable.
+- Double-click the AppImage file to launch the Neo4j Desktop app.
+- Creating a local instance
+    - Click on "Local instances" menu option
+    - Click "Create instance" button
+    - Provide details such as name of local instance such as "local", select "2026.04.0" as instance version, database password as "neo4jneo4j" (recommended only in academic settings).
+    - Click on "Create" button.
+    - Start the newly created instance by clicking on "Start" icon.
+    - Once instance gets started, click on 3-dots button in the same pane and select "Plugins".
+    - Locate for "APOC" and install it by clickin on its "Install" button.
+
+After the installation, check if Neo4j can then be accessed over a web browser at http://localhost:7474.
+
+The default password of neo4j database is is 'neo4j'. When prompted to change the default password at first login, it is suggested to be changed to 'neo4jneo4j' in academic settings for the same database to be accessible to all.
+
+## RUNNING EXPERIMENTS IN VISUAL STUDIO CODE
+
+1. Get Visual Studio Code updated to latest version.
+
+2. For every experiments, set kernel to "agentic_ai" from "Select kernel" window located bottom-right corner of the IDE (Integrated Development Environment).
