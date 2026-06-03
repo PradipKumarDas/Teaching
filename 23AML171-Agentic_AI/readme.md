@@ -175,8 +175,37 @@ After the installation, check if Neo4j can then be accessed over a web browser a
 
 The default password of neo4j database is is 'neo4j'. When prompted to change the default password at first login, it is suggested to be changed to 'neo4jneo4j' in academic settings for the same database to be accessible to all.
 
-## RUNNING EXPERIMENTS IN VISUAL STUDIO CODE
+## RUNNING EXPERIMENTS 
 
-1. Get Visual Studio Code updated to latest version.
+It is recommended to use an IDE (Integrated Development Environment) to carry out the experiments. Visual Studio Code (VS Code) and `Jupyter Lab` (successor of `Jupyter Notebook`) are very popular development environments. Refer IDE specific instructions below.
 
-2. For every experiments, set kernel to "agentic_ai" from "Select kernel" window located bottom-right corner of the IDE (Integrated Development Environment).
+### Visual Studio Code
+
+Following instructions below to configure VS Code.
+
+1. Get VS Code updated to the latest version.
+
+2. Install extension `Python` and `Jupyter`, if not already installed.
+
+3. Restart extension that show their restart are pending.
+
+4. For every experiments, set kernel to `agentic_ai` from `Select kernel` window located bottom-right corner of the IDE.
+
+### Jupyter Lab
+
+1. Execute the following command in the **Anaconda Prompt** terminal ensuring active environment is `agentic_ai`.
+
+```
+pip install jupyterlab
+```
+
+2. `[Optional]` Change the working directory to the one of preference.
+
+3. Execute the following command to open Jupyter Lab interface. Kernel will be set to appropriate one automatically, if Jupyter Lab was opened keeping the 'agentic_ai` environment active.
+
+```
+jupyter lab
+```
+4. Enable code completion by checking `Enable autocompletion` in `Settings` > `Code Completion`. This also enables the 
+    - auto-complete menu to appear with `Tab` key press and 
+    - show of function signature, parameters, and documentation tooltip with `Shift + Tab` key press.
