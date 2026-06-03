@@ -54,13 +54,24 @@ conda activate agentic_ai                     # Activates the newly created envi
 
 **Ollama:**
 
-This installation may require administrator privilege.
+Ollama installation for Windows:
+
+1. Download installation file `OllamaSetup.exe` from
+https://github.com/ollama/ollama/releases/tag/v0.24.0 and install following online instructions.
+
+2. During Ollama installation, if it asks permission to install `Visual C++ Redistributables`, provide consent to install the same.
+
+Ollama installation for Linux:
 
 ```
-curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.24.0 sh     # Installs a specifiC version
+curl -fsSL https://github.com/ollama/ollama/releases/download/v0.24.0/install.sh | sh     # Installs a specific version of Ollama
 ```
 
-After installation Ollama listens at `127.0.0.1:11434`. Open the link in any web browser (alternatively, running command `curl http://localhost:11434` at the terminal) and check if response `Ollama is running` is received.
+Checking Ollama installation:
+
+- To make the command 'ollama' in the terminal, exit from the current terminal and re-open once again.
+
+- Ollama listens at `127.0.0.1:11434`. Open the link in any web browser (alternatively, running command `curl http://localhost:11434` at the terminal) and check if response `Ollama is running` is received. 
 
 If no response is received, then consider starting Ollama using the below mentioned command in the terminal.
 
@@ -69,21 +80,26 @@ ollama serve
 ```
 
 Downlading specific models:
+
+Run the following command to download the mentioned model(s).
+
 ```
 ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
 ```
 
 Similarly, other models can also be downloaded as required.
 
-For a quick check if the downloaded models works, run the command at Terminal and have general conversation with it. To quit from the model prompt, type `/bye` and press enter.
+Checking downloaded model(s):
+
+For a quick check if the downloaded models works, run the command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter.
 
 ```
-ollama run llama3.2:3b --think=false
+ollama run llama3.2:3b --think=false        # Setting --think=false will switch off model reason resulting faster responses from the model
 ```
 
 **Packages:**
 
-Installs required packages.
+Install the required packages by running the following commands in the terminal with environment `agentic_ai` active.
 
 ```
 pip install agent-framework                 # Installs v1.2.0
