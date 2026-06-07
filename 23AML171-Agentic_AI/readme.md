@@ -2,9 +2,13 @@
 
 ## EXPERIMENTS
 
-- A simple 'hello world' agent that responds to generic question in non-streaming and streaming mode.
+1. A 'hello world' agent that responds to generic question in non-streaming and streaming mode.
 
-- _List of remaining experiments will be made available soon._
+2. A Simple agent handing customer service request e.g. cancel order, refund and address change.
+
+3. An agent capable of calling local and API-based tools
+
+4. _Remaining onces coming soon..._
 
 
 ## CONDA ENVIRONMENT
@@ -69,7 +73,7 @@ curl -fsSL https://github.com/ollama/ollama/releases/download/v0.24.0/install.sh
 
 Checking Ollama installation:
 
-- To make the command 'ollama' in the terminal, exit from the current terminal and re-open once again.
+- To make the command 'ollama' avilable in the terminal, exit from the current terminal and re-open once again.
 
 - Ollama listens at `127.0.0.1:11434`. Open the link in any web browser (alternatively, running command `curl http://localhost:11434` at the terminal) and check if response `Ollama is running` is received. 
 
@@ -91,7 +95,7 @@ Similarly, other models can also be downloaded as required.
 
 Checking downloaded model(s):
 
-For a quick check if the downloaded models works, run the command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter.
+For a quick check if the downloaded models works, run the following command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter to return to terminal prompt.
 
 ```
 ollama run llama3.2:3b --think=false        # Setting --think=false will switch off model reason resulting faster responses from the model
