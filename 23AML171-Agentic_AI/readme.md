@@ -8,7 +8,9 @@
 
 3. An agent capable of calling local and API-based tools
 
-4. _Remaining onces coming soon..._
+4. MCP Server as a Tool for an agent to connect
+
+5. _Remaining onces coming soon..._
 
 
 ## CONDA ENVIRONMENT
@@ -22,6 +24,8 @@ List of few of popular selft-hosted models are provided below.
 
 | MODEL	| Intelligence on Artificial Analysis (https://artificialanalysis.ai/) | SIZE | CONTEXT WINDOW | INPUT | OUTPUT SPEED (tokens/second)| CAPABILITIES |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| **qwen3.5:9b**    |	32  |	6.6 GB |	256K |	Text, Image, Audio |	59      | Reasoning and Non-Reasoning, Tools, Coding |
+| **gemma4:12b**  |  29   | 7.6 GB	|256K	| Text, Image, Audio, Video | -- | Automatic speech recognition, Agentic reasoning, Diarization, Video understanding, Coding, and more |
 | **gemma4:e4b**  |  19   | 9.6 GB	|128K	| Text, Image, Audio | -- | Vision, Tools, Multi-modal Reasoning, Coding, Audio |
 | **llama3.1:8b**  | 12    | 4.9 GB	|128K	| Text | 155 | Mathematics, Tools, Reasoning, Multilingual translation, Summarization, Coding |
 | **granite4.1:3b**  | 9    | 2.1 GB	|128K	| Text | -- | Summarization, Text classification, Text extraction, Question-answering, Retrieval Augmented Generation (RAG), Coding, Tools, Multilingual dialog use cases, Fill-In-the-Middle (FIM) |
@@ -30,14 +34,12 @@ List of few of popular selft-hosted models are provided below.
 | **gemma4:e4b**    | 15    |	9.6 GB | 128K |	Text, Image, Audio | 42/50 | Multi-Turn Conversations, Reasoning and Non-Reasoning, Coding, Native function-calling |
 | **qwen3.5:2b**    |	16  |	2.7 GB |	256K |	Text, Image, Audio |	340     | Reasoning and Non-Reasoning, Tools, Coding |
 | **qwen3.5:4b** |	27  |	3.4 GB |	256K |	Text, Image, Audio |	177/199 | Reasoning and Non-Reasoning, Tools, Coding |
-| **qwen3.5:9b**    |	32  |	6.6 GB |	256K |	Text, Image, Audio |	59      | Reasoning and Non-Reasoning, Tools, Coding |
 | **ministral-3:3b** |	11  |	3.0 GB |	256K |	Text, Image |	282 | Reasoning, Multilingual, Tools, Coding, Document analysis [This model requires Ollama 0.13.1, which is currently in pre-release.] |
 | **ministral-3:8b** |	15  |	6.0 GB |	256K |	Text, Image |	158 | Reasoning, Multilingual, Tools, Coding, Document analysis [This model requires Ollama 0.13.1, which is currently in pre-release.] |
 | **deepseek-r1:8b** (DeepSeek-R1-0528 upgrade) | - |	5.2 GB |	128K |	Text |	- |	Reasoning, Coding, Mathematics |
 | **llama3.2:3b** |	-   | 2.0 GB |	128K |	Text |	- |	Multilingual dialog use cases, Tools, Summarization, Prompt rewriting |
 | **nemotron-3-nano:4b** |	15 |	2.8 GB |	256K |	Text | - |		Reasoning, Multilingual, Tools |
 | **Mistral 7B**        | - | 4.4 GB |	32K |	Text | - | - |
-
 
 ## INSTALLATION
 
@@ -89,6 +91,8 @@ Run the following command to download the mentioned model(s).
 
 ```
 ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
+
+ollama pull qwen3.5:2b      # Downloads Qwen 3.5 2B model
 ```
 
 Similarly, other models can also be downloaded as required.
