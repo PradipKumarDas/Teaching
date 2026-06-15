@@ -10,7 +10,9 @@
 
 4. MCP Server as a Tool for an agent to connect
 
-5. _Remaining onces coming soon..._
+5. An agent with short-term memory
+
+6. _Remaining onces coming soon..._
 
 
 ## CONDA ENVIRONMENT
@@ -93,6 +95,7 @@ Run the following command to download the mentioned model(s).
 ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
 
 ollama pull qwen3.5:2b      # Downloads Qwen 3.5 2B model
+
 ```
 
 Similarly, other models can also be downloaded as required.
@@ -133,7 +136,6 @@ pip install langchain-experimental          # Holds experimental LangChain code,
 pip install langchain-neo4j                 # Package contains the LangChain integration with Neo4j.
 
 pip install langgraph-checkpoint-sqlite     # Contains implementation of LangGraph `CheckpointSaver` that uses SQLite DB (both sync and async, via aiosqlite)
-
 ```
 
 **Workflow Visualization:**
@@ -146,19 +148,6 @@ sudo apt install graphviz
 
 **Neo4j Desktop:**
 
-The following commands could be handy at times.
-
-```
-sudo neo4j start    # Starts Neo4j daemon.
-
-sudo neo4j stop     # Stops Neo4j daemon.
-
-sudo neo4j restart  # Restarts Neo4j daemon.
-
-MATCH (n)-[r]->(m) RETURN n, r, m       # Returna all nodes and their connecting relationships. 
-
-MATCH (n) DETACH DELETE n                Execute this at neo4j$ prompt in Neo4j UI to delete all the nodes and relationships from the database
-```
 Installation of Neo4j Desktop on Windows:
 
 Open Neo4j [Deployment Center](https://neo4j.com/deployment-center/?desktop-gdb), go to section `https://neo4j.com/deployment-center/?desktop-gdb`, select operating system from the dropdown and click on `Download`. Then run the installation file and follow online instructions.
@@ -173,15 +162,29 @@ Installation of Neo4j Desktop on Linux:
 - Creating a local instance
     - Click on "Local instances" menu option
     - Click "Create instance" button
-    - Provide details such as name of local instance such as "local", select "2026.04.0" as instance version, database password as "neo4jneo4j" (recommended only in academic settings).
+    - Provide details such as name of local instance such as "local", select "2026.05.0" as instance version, database password as "neo4jneo4j" (recommended only in academic settings).
     - Click on "Create" button.
     - Start the newly created instance by clicking on "Start" icon.
     - Once instance gets started, click on 3-dots button in the same pane and select "Plugins".
-    - Locate for "APOC" and install it by clickin on its "Install" button.
+    - Locate for "APOC" and install it by clickin on its "Install" button. If prompted for restarting the instance, do so by clicking on "Restart" button.
 
 After the installation, check if Neo4j can then be accessed over a web browser at http://localhost:7474.
 
 The default password of neo4j database is is 'neo4j'. When prompted to change the default password at first login, it is suggested to be changed to 'neo4jneo4j' in academic settings for the same database to be accessible to all.
+
+The following commands could be handy at times.
+
+```
+sudo neo4j start    # Starts Neo4j daemon.
+
+sudo neo4j stop     # Stops Neo4j daemon.
+
+sudo neo4j restart  # Restarts Neo4j daemon.
+
+MATCH (n)-[r]->(m) RETURN n, r, m       # Returna all nodes and their connecting relationships. 
+
+MATCH (n) DETACH DELETE n                Execute this at neo4j$ prompt in Neo4j UI to delete all the nodes and relationships from the database
+```
 
 ## RUNNING EXPERIMENTS 
 
