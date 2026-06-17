@@ -2,17 +2,25 @@
 
 ## EXPERIMENTS
 
-1. A 'hello world' agent that responds to generic question in non-streaming and streaming mode.
+- **Introduction**
 
-2. A Simple agent handing customer service request e.g. cancel order, refund and address change.
+    1. A 'hello world' agent that responds to generic question in non-streaming and streaming mode.
 
-3. An agent capable of calling local and API-based tools
+    2. A simple agent handing customer service request
 
-4. MCP Server as a Tool for an agent to connect
+- **Tools Use**
 
-5. An agent with short-term memory
+    3. An agent capable of calling local and API-based tools
 
-6. _Remaining onces coming soon..._
+    4. MCP server as a tool for an agent to connect
+
+- **Memory & Knowledge**
+
+    5. An agent with short-term memory
+
+    6. An agent to query a knowledge graph
+
+7. _Remaining ones coming soon..._
 
 
 ## CONDA ENVIRONMENT
@@ -96,6 +104,7 @@ ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
 
 ollama pull qwen3.5:2b      # Downloads Qwen 3.5 2B model
 
+ollama pull granite4.1:3b   # Downloads Granite 4.1 3B model
 ```
 
 Similarly, other models can also be downloaded as required.
@@ -136,6 +145,8 @@ pip install langchain-experimental          # Holds experimental LangChain code,
 pip install langchain-neo4j                 # Package contains the LangChain integration with Neo4j.
 
 pip install langgraph-checkpoint-sqlite     # Contains implementation of LangGraph `CheckpointSaver` that uses SQLite DB (both sync and async, via aiosqlite)
+
+pip install neo4j-mcp-server                # A bridge between an MCP client and Neo4j instance providing direct and structured access to graph database.
 ```
 
 **Workflow Visualization:**
@@ -148,11 +159,11 @@ sudo apt install graphviz
 
 **Neo4j Desktop:**
 
-Installation of Neo4j Desktop on Windows:
+ Neo4j Desktop Installation on Windows:
 
 Open Neo4j [Deployment Center](https://neo4j.com/deployment-center/?desktop-gdb), go to section `https://neo4j.com/deployment-center/?desktop-gdb`, select operating system from the dropdown and click on `Download`. Then run the installation file and follow online instructions.
 
-Installation of Neo4j Desktop on Linux:
+Neo4j Desktop Installation on Linux:
 
 - Download AppImage for Neo4j Desktop from https://neo4j.com/download/ by filling an online form.
 - Move the downloaded AppImage file to an appropriate folder.
@@ -181,7 +192,7 @@ sudo neo4j stop     # Stops Neo4j daemon.
 
 sudo neo4j restart  # Restarts Neo4j daemon.
 
-MATCH (n)-[r]->(m) RETURN n, r, m       # Returna all nodes and their connecting relationships. 
+MATCH (n)-[r]->(m) RETURN n, r, m       # Returns all nodes and their connecting relationships. 
 
 MATCH (n) DETACH DELETE n                Execute this at neo4j$ prompt in Neo4j UI to delete all the nodes and relationships from the database
 ```
