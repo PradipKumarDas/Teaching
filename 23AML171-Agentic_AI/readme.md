@@ -20,7 +20,11 @@
 
     6. An agent to query a knowledge graph
 
-7. _Remaining ones coming soon..._
+- **Multi-agent Systems**
+
+    7. Multi-agent Personal Assistant System Built on Supervisor Pattern
+
+_Remaining ones coming soon..._
 
 
 ## CONDA ENVIRONMENT
