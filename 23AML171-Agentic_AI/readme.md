@@ -24,6 +24,8 @@
 
     7. Multi-agent Personal Assistant System Built on Supervisor Pattern
 
+    8. Multi-agent Knowledge Base System Built on Router Pattern
+
 _Remaining ones coming soon..._
 
 
@@ -63,7 +65,7 @@ Ensure Anaconda datascience platform is already installed in your computer. Then
 
 **Specific Environment to Run Experiments:**
 
-For Windows, run the following commands in **Andaconda Prompt**.
+For Windows, run the following commands in **Anaconda Prompt**.
 
 ```
 conda create -n agentic_ai python=3.12.13     # Creates a new conda environment named "agentic_ai".
