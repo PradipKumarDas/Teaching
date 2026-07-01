@@ -26,6 +26,10 @@
 
     8. Multi-agent Knowledge Base System Built on Router Pattern
 
+- **Evaluation & Monitoring**
+
+    9. Evaluating agent performance assessing its trajectory using trajectory match and LLM-as-Judge approaches
+    
 _Remaining ones coming soon..._
 
 
@@ -153,6 +157,9 @@ pip install langchain-neo4j                 # Package contains the LangChain int
 pip install langgraph-checkpoint-sqlite     # Contains implementation of LangGraph `CheckpointSaver` that uses SQLite DB (both sync and async, via aiosqlite)
 
 pip install neo4j-mcp-server                # A bridge between an MCP client and Neo4j instance providing direct and structured access to graph database.
+
+pip install agentevals                      # Provides prebuilt evaluators based on trajectory match or by LLM-as-judge
+
 ```
 
 **Workflow Visualization:**
