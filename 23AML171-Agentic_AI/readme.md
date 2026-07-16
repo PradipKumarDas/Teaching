@@ -29,8 +29,8 @@
 - **Evaluation & Monitoring**
 
     9. Evaluating agent performance assessing its trajectory using trajectory match and LLM-as-Judge approaches
-    
-_Remaining ones coming soon..._
+
+    10. Building a fully observable AI agent by instrumenting the application to capture every model call, tool execution, retrieval operation and generation along with inputs, outputs, latency and token usage.
 
 
 ## CONDA ENVIRONMENT
@@ -40,7 +40,7 @@ Python 3.12.13
 ## SELF-HOSTED MODELS & PROVIDERS
 Majority of the experiments use self-hosted models using provider _Ollama_. Ollama service must be running to serve the models to the experiments. Refer to the installation section for additional instructions.
 
-List of few of popular selft-hosted models are provided below.
+**List of few of the popular self-hosted models:**
 
 | MODEL	| Intelligence on Artificial Analysis (https://artificialanalysis.ai/) | SIZE | CONTEXT WINDOW | INPUT | OUTPUT SPEED (tokens/second)| CAPABILITIES |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -61,9 +61,16 @@ List of few of popular selft-hosted models are provided below.
 | **nemotron-3-nano:4b** |	15 |	2.8 GB |	256K |	Text | - |		Reasoning, Multilingual, Tools |
 | **Mistral 7B**        | - | 4.4 GB |	32K |	Text | - | - |
 
+**List of few of the popular self-hosted embedding models:**
+
+| MODEL | SIZE | CONTEXT WINDOWS | INPUT | CAPABILITIES |
+| ----- | ---- | --------------- | ----- | ------------ |
+| qwen3-embedding:0.6b | 639MB | 32K | Text | Search and retrieval tasks including classification, clustering, and semantic similarity search |
+
+
 ## INSTALLATION
 
-**Anaconda Datascience Platform:**
+**Anaconda Data Science Platform:**
 
 Ensure Anaconda datascience platform is already installed in your computer. Then follow the instruction below to complete required installation to perform all the above listed experiments.
 
@@ -80,20 +87,20 @@ conda activate agentic_ai                     # Activates the newly created envi
 
 **Ollama:**
 
-Ollama installation for Windows:
+Ollama Installation for Windows:
 
 1. Download installation file `OllamaSetup.exe` from
 https://github.com/ollama/ollama/releases/tag/v0.24.0 and install following online instructions.
 
 2. During Ollama installation, if it asks permission to install `Visual C++ Redistributables`, provide consent to install the same.
 
-Ollama installation for Linux:
+Ollama Installation for Linux:
 
 ```
 curl -fsSL https://github.com/ollama/ollama/releases/download/v0.24.0/install.sh | sh     # Installs a specific version of Ollama
 ```
 
-Checking Ollama installation:
+Checking Ollama Installation:
 
 - To make the command 'ollama' avilable in the terminal, exit from the current terminal and re-open once again.
 
@@ -105,21 +112,23 @@ If no response is received, then consider starting Ollama using the below mentio
 ollama serve
 ```
 
-Downlading specific models:
+Downloading Specific Models:
 
 Run the following command to download the mentioned model(s).
 
 ```
-ollama pull llama3.2:3b     # Downloads Llama 3.2 3B model
+ollama pull llama3.2:3b             # Downloads Llama 3.2 3B model
 
-ollama pull qwen3.5:2b      # Downloads Qwen 3.5 2B model
+ollama pull qwen3.5:2b              # Downloads Qwen 3.5 2B model
 
-ollama pull granite4.1:3b   # Downloads Granite 4.1 3B model
+ollama pull granite4.1:3b           # Downloads Granite 4.1 3B model
+
+ollama pull qwen3-embedding:0.6b    # Downloads Qwen 3 0.6B embedding model
 ```
 
 Similarly, other models can also be downloaded as required.
 
-Checking downloaded model(s):
+Checking Downloaded Model(s):
 
 For a quick check if the downloaded models works, run the following command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter to return to terminal prompt.
 
@@ -160,6 +169,9 @@ pip install neo4j-mcp-server                # A bridge between an MCP client and
 
 pip install agentevals                      # Provides prebuilt evaluators based on trajectory match or by LLM-as-judge
 
+pip install ipywidgets                      # Installs interactive HTML Widgets (jupyter-widgets) for Jupyter notebooks and IPython kernel.
+
+pip install arize-phoenix                   # Provides a self-hosted platform for observability
 ```
 
 **Workflow Visualization:**
@@ -172,7 +184,7 @@ sudo apt install graphviz
 
 **Neo4j Desktop:**
 
- Neo4j Desktop Installation on Windows:
+Neo4j Desktop Installation on Windows:
 
 Open Neo4j [Deployment Center](https://neo4j.com/deployment-center/?desktop-gdb), go to section `https://neo4j.com/deployment-center/?desktop-gdb`, select operating system from the dropdown and click on `Download`. Then run the installation file and follow online instructions.
 
