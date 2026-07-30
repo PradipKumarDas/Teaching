@@ -32,6 +32,10 @@
 
     10. Building a fully observable AI agent by instrumenting the application to capture every model call, tool execution, retrieval operation and generation along with inputs, outputs, latency and token usage.
 
+- **LangChain Ecosystem**
+
+    11. Low-Level Orchestration using LangGraph
+    
 
 ## CONDA ENVIRONMENT
 Python 3.12.13
