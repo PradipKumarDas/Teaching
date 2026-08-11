@@ -1,0 +1,17 @@
+EXPERIMENTS
+===========
+1. A 'hello world' agent that responds to generic question in non-streaming and streaming mode.
+2. A simple agent handing customer service request
+3. An agent capable of calling local and API-based tools
+4. MCP server as a tool for an agent to connect
+5. An agent with short-term memory
+
+INSTRUCTIONS:
+=============
+- Internet should not be accessed without instructor's permission
+- Write-up should contain major conceptual blocks, important code-snippets and required outputs
+- Fill all the details in cover page and first page and sign in the Green Book.
+- No two students sitting side-by-side should be having the same experiment.
+- Make use of experiment template provided.
+- For reference, consider opening README.md file in an editor (Jupyter Lab or Visual Studio Code).
+- Green book must be submitted to course instructor before leaving
