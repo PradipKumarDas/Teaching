@@ -1,0 +1,20 @@
+EXPERIMENTS
+===========
+6. Knowledge Graph: Implementing an agent to query a knowledge graph.
+7. Multi-agent: Building a simple multi-agent personal assistant system following a supervisor/manager and sub-agents pattern.
+8. Multi-agent: Building a simple multi-source knowledge base following router pattern in multi-agent system.
+9. Agent Evaluation: Using an built-in evaluator to evaluate an agent by measuring how well the agent performs by assessing its execution trajectory, the sequence of messages and tool calls it produces using approaches such as Trajectory Match and LLM-as-judge.
+10. Agent Observability: Building a fully observable AI agent by instrumenting the application to capture every model call, tool execution, retrieval operation and generation along with inputs, outputs, latency and token usage.
+11. Low-Level Orchestration using LangGraph: Demonstrating core LangGraph capabilities (Durable execution, Fault tolerance, Memory, Event streaming, Interrupts and Human-in-the-loop) in a single, easy-to-understand workflow by building a stateful approval copilot/assistant that processes assignment extension requests and routes them through policy checks, risk scoring, optional human review, and final decision generation.
+12. Building a research agent using a LangGraph's open source and general purpose deep agents harness.
+
+
+INSTRUCTIONS:
+=============
+- Internet should not be accessed without instructor's permission
+- Write-up should contain major conceptual blocks, important code-snippets and required outputs
+- Fill all the details in cover page and first page and sign in the Green Book.
+- No two students sitting side-by-side should be having the same experiment.
+- Make use of experiment template provided.
+- For reference, consider opening README.md file in an editor (Jupyter Lab or Visual Studio Code).
+- Green book must be submitted to course instructor before leaving
