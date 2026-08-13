@@ -35,6 +35,8 @@
 - **LangChain Ecosystem**
 
     11. Low-Level Orchestration using LangGraph
+
+    12. [Building a research agent using a LangGraph's open source and general purpose agents harness](./agent_harness/)
     
 
 ## CONDA ENVIRONMENT
@@ -50,7 +52,6 @@ Majority of the experiments use self-hosted models using provider _Ollama_. Olla
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | **qwen3.5:9b**    |	32  |	6.6 GB |	256K |	Text, Image, Audio |	59      | Reasoning and Non-Reasoning, Tools, Coding |
 | **gemma4:12b**  |  29   | 7.6 GB	|256K	| Text, Image, Audio, Video | -- | Automatic speech recognition, Agentic reasoning, Diarization, Video understanding, Coding, and more |
-| **gemma4:e4b**  |  19   | 9.6 GB	|128K	| Text, Image, Audio | -- | Vision, Tools, Multi-modal Reasoning, Coding, Audio |
 | **llama3.1:8b**  | 12    | 4.9 GB	|128K	| Text | 155 | Mathematics, Tools, Reasoning, Multilingual translation, Summarization, Coding |
 | **granite4.1:3b**  | 9    | 2.1 GB	|128K	| Text | -- | Summarization, Text classification, Text extraction, Question-answering, Retrieval Augmented Generation (RAG), Coding, Tools, Multilingual dialog use cases, Fill-In-the-Middle (FIM) |
 | **granite4.1:8b**	| 12    | 5.3 GB    |	128K | Text | 111 | Summarization, Text classification, Text extraction, Question-answering, Retrieval Augmented Generation (RAG), Coding, Tools, Multilingual dialog use cases, Fill-In-the-Middle (FIM) |
@@ -74,11 +75,11 @@ Majority of the experiments use self-hosted models using provider _Ollama_. Olla
 
 ## INSTALLATION
 
-**Anaconda Data Science Platform:**
+### Anaconda - Data Science Platform
 
-Ensure Anaconda datascience platform is already installed in your computer. Then follow the instruction below to complete required installation to perform all the above listed experiments.
+Ensure Anaconda data science platform is already installed in your computer. Then follow the instruction below to complete required installation to perform all the above listed experiments.
 
-**Specific Environment to Run Experiments:**
+**Setting-up the Environment to Run Experiments**
 
 For Windows, run the following commands in **Anaconda Prompt**.
 
@@ -89,22 +90,22 @@ conda activate agentic_ai                     # Activates the newly created envi
 
 ```
 
-**Ollama:**
+### Ollama - A Self-hosted Models Provider**
 
-Ollama Installation for Windows:
+**Ollama Installation for Windows**
 
 1. Download installation file `OllamaSetup.exe` from
 https://github.com/ollama/ollama/releases/tag/v0.24.0 and install following online instructions.
 
 2. During Ollama installation, if it asks permission to install `Visual C++ Redistributables`, provide consent to install the same.
 
-Ollama Installation for Linux:
+**Ollama Installation for Linux**
 
 ```
 curl -fsSL https://github.com/ollama/ollama/releases/download/v0.24.0/install.sh | sh     # Installs a specific version of Ollama
 ```
 
-Checking Ollama Installation:
+**Checking Ollama Installation**
 
 - To make the command 'ollama' avilable in the terminal, exit from the current terminal and re-open once again.
 
@@ -116,7 +117,7 @@ If no response is received, then consider starting Ollama using the below mentio
 ollama serve
 ```
 
-Downloading Specific Models:
+**Downloading Specific Models**
 
 Run the following command to download the mentioned model(s).
 
@@ -132,15 +133,15 @@ ollama pull qwen3-embedding:0.6b    # Downloads Qwen 3 0.6B embedding model
 
 Similarly, other models can also be downloaded as required.
 
-Checking Downloaded Model(s):
+**Checking Downloaded Models**
 
-For a quick check if the downloaded models works, run the following command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter to return to terminal prompt.
+For a quick check if a downloaded models works, run the following command in the terminal and engage with a short conversation with it. To quit from the model prompt, type `/bye` and press enter to return to terminal prompt.
 
 ```
 ollama run llama3.2:3b --think=false        # Setting --think=false will switch off model reason resulting faster responses from the model
 ```
 
-**Packages:**
+### Packages
 
 Install the required packages by running the following commands in the terminal with environment `agentic_ai` active.
 
@@ -157,7 +158,8 @@ pip install langchain                       # Installs Lanchain framework
 
 pip install langchain-ollama                # An integration package connecting Ollama and LangChain   
 
-pip install langchain-community             # Installs packages for 3rd-party integrations
+pip install langchain-community             # Installs packages for 3rd-party integrations; DeprecationWarning: `langchain-community` is being sunset and is no longer actively maintained. See https://github.com/langchain-ai/langchain-community/issues/674 for details and migration guidance toward standalone integration packages.
+  from langchain_community.utilities import SQLDatabase
 
 pip install langchain-mcp-adapters          # Library provides a lightweight wrapper that makes Anthropic Model Context Protocol (MCP) tools compatible with LangChain and LangGraph
 
@@ -176,9 +178,11 @@ pip install agentevals                      # Provides prebuilt evaluators based
 pip install ipywidgets                      # Installs interactive HTML Widgets (jupyter-widgets) for Jupyter notebooks and IPython kernel.
 
 pip install arize-phoenix                   # Provides a self-hosted platform for observability
+
+pip install deepagents                      # Provides a general purpose agent harness to build autonomous agents
 ```
 
-**Workflow Visualization:**
+### Workflow Visualization
 
 Installs visualization support for workflows. For Windows, refer https://graphviz.org/download/ and follow the installation instructions. For Linux, run the following command in the terminal.
 
@@ -226,11 +230,11 @@ MATCH (n)-[r]->(m) RETURN n, r, m       # Returns all nodes and their connecting
 MATCH (n) DETACH DELETE n                Execute this at neo4j$ prompt in Neo4j UI to delete all the nodes and relationships from the database
 ```
 
-## RUNNING EXPERIMENTS 
+### Editors
 
-It is recommended to use an IDE (Integrated Development Environment) to carry out the experiments. Visual Studio Code (VS Code) and `Jupyter Lab` (successor of `Jupyter Notebook`) are very popular development environments. Refer IDE specific instructions below.
+Follow the instructions below to install the preferred editor.
 
-### Visual Studio Code
+**Visual Studio Code**
 
 Following instructions below to configure VS Code.
 
@@ -242,7 +246,7 @@ Following instructions below to configure VS Code.
 
 4. For every experiments, set kernel to `agentic_ai` from `Select kernel` window located bottom-right corner of the IDE.
 
-### Jupyter Lab
+**Jupyter Lab**
 
 1. Execute the following command in the **Anaconda Prompt** terminal ensuring active environment is `agentic_ai`.
 
@@ -260,3 +264,9 @@ jupyter lab
 4. Enable code completion by checking `Enable autocompletion` in `Settings` > `Code Completion`. This also enables the 
     - auto-complete menu to appear with `Tab` key press and 
     - show of function signature, parameters, and documentation tooltip with `Shift + Tab` key press.
+
+## RUNNING EXPERIMENTS 
+
+It is recommended to use an IDE (Integrated Development Environment) to carry out the experiments. Visual Studio Code (VS Code) and `Jupyter Lab` (successor of `Jupyter Notebook`) are very popular development environments. Refer IDE specific instructions below.
+
+
