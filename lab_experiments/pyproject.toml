@@ -1,0 +1,66 @@
+[project]
+name = "lab-experiments"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Pradip Kumar Das", email = "pradipkumardas@hotmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ipywidgets>=8.1.9",
+    "jupyterlab>=4.6.3",
+    "matplotlib>=3.11.1",
+    "networkx>=3.6.1",
+    "pandas>=3.0.5",
+    "pgmpy>=1.1.2",
+    "scikit-learn>=1.9.0",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.6",
+    "tqdm>=4.70.0",
+]
+
+[project.optional-dependencies]
+cpu = [
+  "torch>=2.13.0",
+  "torchvision>=0.28.0",
+]
+cu130 = [
+  "torch>=2.13.0",
+  "torchvision>=0.28.0",
+]
+
+[tool.uv]
+conflicts = [
+  [
+    { extra = "cpu" },
+    { extra = "cu130" },
+  ],
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu130", extra = "cu130" },
+]
+torchvision = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu130", extra = "cu130" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[project.scripts]
+lab-experiments = "lab_experiments:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
