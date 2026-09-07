@@ -22,19 +22,17 @@ Follow the below instructions to setup the environment on Windows to perform exp
     Close the PowerShell console.
 
 3. Open **Command Prompt** and type `D:` and press Enter to change current drive from `C:` to `D:`.
-    > [NOTE] Non-Windows installation drive such as `C:` is highly preferred. If `D:` or any other secondary drive is not available, continue installation on `C:` drive. In that case, replace letter `D` with 'C' wherever mentioned in this installation section.
+    > **NOTE:** Non-Windows installation drive other than `C:` drive is highly preferred. If `D:` or any other secondary drive is not available, continue installation on `C:` drive. In that case, replace letter `D` with 'C' wherever mentioned in this installation section.
   
 4. Type `uv init lab_experiments` and press Enter to create workplace.
 
 5. Type `cd lab_experiments` to change the directory to the workspace.
 
-6. Keeping the Command Prompt console opened, open URL https://github.com/PradipKumarDas/Teaching/lab_experiments in a browser and download `pyproject.toml` and `uv.lock` file. 
+6. Keeping the Command Prompt console opened, open URL https://github.com/PradipKumarDas/Teaching/tree/master/lab_experiments in a browser and download `pyproject.toml` and `uv.lock` file. 
 
 7. Use **File Explorer** to move the downloaded files to directory `D:\lab_experiments` overwriting the existing ones.
 
-8. Go back to already opened Command Prompt and check if it is already in any environment such as `base` the indication of which appear as a prefix to the prompt like `(base)D:\lab_experiments>". If so try executing command `deactivate` or `conda deactivate` to come out of that environment.
-
-9. type `uv sync --extra cpu` for a CPU-only computer (or `uv sync --extra cu130` for GPU-enabled computer) and press Enter to synchronize the dependencies with the target environment. Note that this may take several minutes to complete depending upon Internet speed.
+8. Type `uv sync --extra cpu` for a CPU-only computer (or `uv sync --extra cu130` for GPU-enabled computer) and press Enter to synchronize the dependencies with the target environment. Note that this may take several minutes to complete depending upon the Internet speed.
 
 9. Keeping the Command Prompt open, open URL https://drive.google.com/drive/folders/10z5_cOia54qWcV541v7Vg-Hhy01xdpmJ?usp=sharing and download `data.zip`.
 
@@ -48,7 +46,7 @@ Setup of the environment is now complete.
 
 ## Activating Environment to Perform Experiments
 
-Follow only the below instructions to perform experiments next time onwards.
+Follow the below instructions to perform experiments next time onwards.
 
 1. Open **Command Prompt**, type `D:` and press Enter to change current drive from `C:` to `D:`.
 
@@ -60,11 +58,15 @@ Follow only the below instructions to perform experiments next time onwards.
 
 5. Type `jupyter lab` and press Enter to open code editor. Note that the only Jupyter Lab is formally supported for now.
 
-    > [**TROUBLESHOOTING**]
-    > If error related to non-availability of Microsoft Visual C++ Redistributable is shown, perform the following steps.
+    > **TROUBLESHOOTING:**
+    > 
+    >   If error related to non-availability of Microsoft Visual C++ Redistributable is shown, perform the following steps.
     > - Open URL https://visualstudio.microsoft.com/downloads/ in a browser, 
     > - Expand section **Other Tools, Frameworks, and Redistributables**, 
     > - Select optin **Microsoft Visual C++ v14 Redistributable** with checkbox **x64** ticked and click **Download**.
     > - Execute the downloaded executable and follow the online instructions to install redistributables. Enter Administrator credential when asked.
 
-
+6. Once the experiment is over, 
+    - complete the execution and viva related evaluation with course/lab. instructor,
+    - remove the concerned notebook, and
+    - choose **File -> Shut Down** from clean shutdown for Jupyter Lab. Close the browser after receiving message **Server stopped**.
