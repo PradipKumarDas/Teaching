@@ -6,6 +6,8 @@
 
     1.1 Dimensionality Reduction Using Principal Component Analysis
 
+    1.2 Data Compression & Incremental Analysis of Principal Components
+
 _Remaining experiments are coming up._
 
 
