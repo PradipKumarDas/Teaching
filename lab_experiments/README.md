@@ -8,7 +8,7 @@
 
     1.2 Data Compression & Incremental Analysis of Principal Components
 
-    1.3 Clustering Using _k_-Means Algorithm
+    1.3 Clustering Using k-Means Algorithm
 
 _Remaining experiments are coming up._
 
