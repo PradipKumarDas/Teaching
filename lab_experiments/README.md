@@ -8,6 +8,8 @@
 
     1.2 Data Compression & Incremental Analysis of Principal Components
 
+    1.3 Clustering Using _k_-Means Algorithm
+
 _Remaining experiments are coming up._
 
 
@@ -28,7 +30,7 @@ Follow the below instructions to setup the environment on Windows to perform exp
   
 4. Type `uv init lab_experiments` and press Enter to create workplace.
 
-5. Type `cd lab_experiments` to change the directory to the workspace.
+5. Type `cd \lab_experiments` to change the directory to the workspace.
 
 6. Keeping the Command Prompt console opened, open URL https://github.com/PradipKumarDas/Teaching/tree/master/lab_experiments in a browser and download `pyproject.toml` and `uv.lock` file. 
 
@@ -52,7 +54,7 @@ Follow the below instructions to perform experiments next time onwards.
 
 1. Open **Command Prompt**, type `D:` and press Enter to change current drive from `C:` to `D:`.
 
-2. Type `cd lab_experiments` and press Enter to change working directory from root to `lab_experiments`.
+2. Type `cd \lab_experiments` and press Enter to change working directory from root to `lab_experiments`.
 
 3. Type `.venv\Scripts\activate` and press Enter to activate development environment. Once activated, its prompt will appear before the command prompt like `(lab_experiments)D:\lab_experiments>`.
 
