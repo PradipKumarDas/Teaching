@@ -6,7 +6,7 @@
 
     1.1 Dimensionality Reduction Using Principal Component Analysis
 
-    1.2 Data Compression & Incremental Analysis of Principal Components
+    1.2 Data Compression, Incremental Analysis of Principle Components & Visualization of High-dimensional Data
 
     1.3 Clustering Using k-Means Algorithm
 
