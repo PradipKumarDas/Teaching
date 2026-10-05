@@ -8,7 +8,9 @@
 
     1.2 Data Compression, Incremental Analysis of Principle Components & Visualization of High-dimensional Data
 
-    1.3 Clustering Using k-Means Algorithm
+    2.1 Clustering using k-Means Algorithm
+
+    2.2 Clustering, Anomaly Detection and Generative Modeling using Gaussian Mixture Model
 
 _Remaining experiments are coming up._
 
