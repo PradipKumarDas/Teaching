@@ -12,6 +12,8 @@
 
     2.2 Clustering, Anomaly Detection and Generative Modeling using Gaussian Mixture Model
 
+    3.1 Time-series Forecasting with Naive Approaches and Baselining
+
 _Remaining experiments are coming up._
 
 
