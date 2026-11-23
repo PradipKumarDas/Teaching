@@ -14,6 +14,8 @@
 
     3.1 Time-series Forecasting with Naive Approaches and Baselining
 
+    3.2 Time-series Forecasting using Moving Average Model
+
 _Remaining experiments are coming up._
 
 
