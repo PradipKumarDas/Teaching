@@ -16,6 +16,14 @@
 
     3.2 Time-series Forecasting using Moving Average Model
 
+    4.1 <PLACEHOLDER>
+
+    4.2 <PLACEHOLDER>
+
+    5.1 Perceptron & Multilayer Perceptron for Classification and Regression using Scikit-Learn
+
+    5.2 <PLACEHOLDER>
+
 _Remaining experiments are coming up._
 
 
