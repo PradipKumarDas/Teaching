@@ -16,15 +16,13 @@
 
     3.2 Time-series Forecasting using Moving Average Model
 
-    4.1 <PLACEHOLDER>
+    4.1 Multinomial Naive Bayes for Classification
 
-    4.2 <PLACEHOLDER>
+    4.2 Bayesian Belief Network Construction and Inference
 
     5.1 Perceptron & Multilayer Perceptron for Classification and Regression using Scikit-Learn
 
-    5.2 <PLACEHOLDER>
-
-_Remaining experiments are coming up._
+    5.2 Multilayer Perceptron for Classification using Sequential API
 
 
 ## Laboratory Environment Setup on Windows [ONE-TIME SETUP]
